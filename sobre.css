@@ -1,0 +1,440 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+:root {
+    /* Fontes */
+    --fonte1: 'Frank Ruhl Libre', serif;
+    --fonte2: 'Source Sans Pro', sans-serif;
+
+    /* Cores */
+    --cor1: rgb(152, 30, 37);
+    --cor2: rgb(0, 0, 0);
+    --cor3: rgb(74, 74, 74);
+    --cor4: rgb(220, 220, 220);
+    --cor5: rgb(230, 230, 230);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: var(--fonte2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fonte1);
+}
+
+a, li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+section, header, p, main {
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+
+/
+.banner {
+    background-image: url(https://www.zarla.com/images/Zarla-lawyer-logos-5000x3337-2021023.jpeg?crop=2:1,smart&width=730);
+}
+
+.fundo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.banner .escurecimento {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner .container h1{
+    text-align: right;
+    color: white;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+
+.apres {
+    padding: 4rem 0;
+    background-color: var(--cor4);
+}
+
+.apres .container {
+    display: grid;
+    grid-template-areas: 
+    "titulo titulo"
+    "texto1 texto1"
+    "foto conteudo";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+
+.apres .container p {
+    font-size: 1.2rem;
+}
+
+.apres .container h1:nth-child(1){
+    grid-area: titulo;
+    font-size: 2.5rem;
+    align-self: center;
+}
+
+.apres .container p:nth-child(2){
+    grid-area: texto1;
+    font-size: 1.2rem;
+    color: var(--cor3);
+}
+
+.apres .container > img:nth-child(3){
+    grid-area: foto;
+    width: 100%;
+    box-shadow: 0px 0px 8px black;
+}
+
+.apres .container div:nth-child(4){
+    grid-area: conteudo;
+    }
+
+.apres .container div *:nth-child(n) {
+    padding-bottom: 1rem;
+}
+
+
+.historia {
+    padding: 4rem 0;
+    background-color: var(--cor5);
+}
+
+.historia .topo-historia {
+    display: grid;
+    grid-template-areas: 
+    "titulo texto1"
+    "texto2 texto3";
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1.5rem;
+    padding-bottom: 3rem;
+}
+
+.historia .topo-historia p {
+    font-size: 1.2rem;
+}
+
+.historia .topo-historia h2:nth-child(1) {
+    grid-area: titulo;
+    font-size: 3rem;
+    font-weight: 500;
+    align-self: center;
+}
+
+.historia .topo-historia p:nth-child(2) {
+    grid-area: texto1;
+}
+
+.historia .topo-historia p:nth-child(3) {
+    grid-area: texto2;
+}
+
+.historia .topo-historia p:nth-child(4) {
+    grid-area: texto3;
+    color: var(--cor3);
+}
+
+.historia .base-historia {
+    display: grid;
+    grid-template-areas: 
+    "quad1 quad2 quad3"
+    "quad4 quad5 quad6"
+    "quad7 quad8 quad9";
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+}
+
+.historia .base-historia h3 {
+    color: var(--cor1);
+    font-size: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.historia .base-historia p {
+    color: var(--cor3);
+    line-height: 1.8rem;
+}
+
+.historia .base-historia div:nth-child(1) {
+    grid-area: quad1;
+}
+
+.historia .base-historia div:nth-child(2) {
+    grid-area: quad2;
+}
+
+.historia .base-historia div:nth-child(3) {
+    grid-area: quad3;
+}
+
+.historia .base-historia div:nth-child(4) {
+    grid-area: quad4;
+}
+
+.historia .base-historia div:nth-child(5) {
+    grid-area: quad5;
+}
+
+.historia .base-historia div:nth-child(6) {
+    grid-area: quad6;
+}
+
+.historia .base-historia div:nth-child(7) {
+    grid-area: quad7;
+}
+
+.historia .base-historia div:nth-child(8) {
+    grid-area: quad8;
+}
+
+.historia .base-historia div:nth-child(9) {
+    grid-area: quad9;
+}
+
+
+.time {
+    padding: 4rem 0;
+    background-color: var(--cor4);
+}
+
+.time .topo-time {
+    padding-bottom: 2rem;
+}
+
+.time .topo-time h2{
+    align-self: center;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.time .topo-time p{
+    font-size: 1.2rem;
+    line-height: 2.5rem;
+}
+
+.time .quad-time {
+    display: grid;
+    grid-template-areas: 
+    "foto1 cont1"
+    "cont2 foto2"
+    "foto3 cont3"
+    "cont4 foto4";
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+}
+
+.time .quad-time img:nth-of-type(1) {
+    grid-area: foto1;
+}
+
+.time .quad-time img:nth-of-type(2) {
+    grid-area: foto2;
+}
+
+.time .quad-time img:nth-of-type(3) {
+    grid-area: foto3;
+}
+
+.time .quad-time img:nth-of-type(4) {
+    grid-area: foto4;
+}
+
+.time .quad-time img {
+    width: 100%;
+    box-shadow: 0px 0px 10px black;
+}
+
+.time .quad-time div:nth-of-type(1) {
+    grid-area: cont1;
+}
+
+.time .quad-time div:nth-of-type(2) {
+    grid-area: cont2;
+}
+
+.time .quad-time div:nth-of-type(3) {
+    grid-area: cont3;
+}
+
+.time .quad-time div:nth-of-type(4) {
+    grid-area: cont4;
+}
+
+.time .quad-time div {
+    align-self: center;
+}
+
+.time .quad-time div h3 {
+    color: var(--cor1);
+    font-size: 3rem;
+    font-weight: 500;
+    padding-bottom: 2rem;
+}
+
+.time .quad-time div p {
+    font-size: 1.2rem;
+    line-height: 2rem;
+    padding-bottom: 2rem;
+}
+
+
+.contato {
+    padding: 4rem 0;
+    background-color: var(--cor5);
+}
+
+.contato .container{
+    display: grid;
+    grid-template-areas: 
+    "cont botao";
+    grid-template-columns: 70% 1fr;
+}
+
+.contato .container div:nth-child(1){
+    grid-area: cont;   
+}
+
+.contato .container div:nth-child(2){
+    grid-area: botao;   
+}
+
+.contato .container h2 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 3rem;
+    padding-bottom: 2rem;
+}
+
+.contato .container p {
+    font-size: 1.2rem;
+    font-weight: 500;
+    line-height: 2rem;
+    padding-bottom: 2rem;
+}
+
+.contato .container p strong {
+    color: var(--cor1);
+    font-family: var(--fonte1);
+    font-size: 1.3rem;
+}
+
+.contato .container h3 {
+    font-size: 2rem;
+    font-weight: 500;
+}
+
+.contato .container .botao2 {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+}
+
+
+
+@media (max-width: 700px) {
+
+    html {
+        font-size: 110%;
+    }
+
+    h1, h2, h3, p {
+        text-align: center;
+    }
+
+    .fundo {
+        background-position: right center;
+    }
+
+    .banner .container h1 {
+        text-align: center;
+    }
+
+    .apres .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .apres .container *:nth-child(n){
+        margin-bottom: 2rem;
+    }
+
+    .apres .container *:last-child{
+        margin-bottom: 0;
+    }
+    
+    .apres .cont-apres img:nth-child(3) {
+        display: block;
+        margin: auto;
+    }
+
+    .historia .container p:nth-child(n){
+        margin-bottom: 2rem;
+    }
+
+    .historia .container *:last-child{
+        margin-bottom: 0;
+    }
+
+    .historia .topo-historia {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .historia .base-historia {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .historia .base-historia h3{
+        font-size: 2rem;
+    }
+
+    .historia .base-historia p{
+        font-size: 1.22rem;
+    }
+
+    .time .topo-time p {
+        line-height: 2rem;    
+    }
+
+    .time .quad-time {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .time .quad-time div h3 {
+        font-size: 2rem;
+    }
+
+    .time .cont-time:nth-child(n){
+        margin-bottom: 2rem;
+    }
+
+    .time .cont-time:last-child{
+        margin-bottom: 0rem;
+    }
+    
+    .contato .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+}

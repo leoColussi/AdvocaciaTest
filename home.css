@@ -1,0 +1,507 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+:root {
+    /* Fontes */
+    --fonte1: 'Frank Ruhl Libre', serif;
+    --fonte2: 'Source Sans Pro', sans-serif;
+
+    /* Cores */
+    --cor1: rgb(152, 30, 37);
+    --cor2: rgb(18, 18, 18);
+    --cor3: rgb(74, 74, 74);
+    --cor4: rgb(220, 220, 220);
+    --cor5: rgb(230, 230, 230);
+}
+
+
+.banner {
+    background-image: url(https://res.cloudinary.com/delxum6fl/image/upload/f_auto,q_auto:good/v1615559441/direito-previdenciario_jqddgn.png);
+    min-height: 1000px;
+}
+
+.banner .escurecimento {
+    height: 1000px;
+}
+
+.banner .container {
+    display: grid;
+    grid-template-areas:
+        "vazio cont1"
+        "vazio cont2"
+        "vazio cont3";
+    grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, auto);
+    align-content: center;
+    height: 100%;
+}
+
+.banner .container h1 {
+    grid-area: cont1;
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: rgb(255, 255, 255);
+}
+
+.banner .container p {
+    grid-area: cont2;
+    color: rgb(255, 255, 255);
+}
+
+.banner .container a {
+    grid-area: cont3;
+}
+
+.banner .botao1 {
+    width: 11rem;
+    padding: 0.5rem 2rem;
+    margin: 0;
+    text-align: center;
+}
+
+
+.apres {
+    background-color: var(--cor4);
+}
+
+.apres .container {
+    padding: 5rem 0;
+    display: grid;
+    grid-template-areas:
+        "topo topo"
+        "imagem conteudo";
+    grid-gap: 2rem;
+}
+
+.apres .container .topo-apres{
+    grid-area: topo;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.apres .container .topo-apres h2{
+    font-size: 2.2rem;
+}
+
+.apres .container .topo-apres h3{
+    font-size: 3rem;
+    color: var(--cor1);
+    font-weight: 500;
+}
+
+.apres .container .topo-apres h4{
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.apres .container .img-apres{
+    grid-area: imagem;
+    box-shadow: 0px 0px 10px rgb(119, 119, 119);
+}
+
+.apres .container .img-apres img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.apres .container .cont-apres{
+    grid-area: conteudo;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 1.5rem;
+}
+
+.apres .container .cont-apres h2{
+    font-size: 2rem;
+}
+
+.apres .container .cont-apres h3{
+    font-size: 1.5rem;
+}
+
+.apres .container .cont-apres p{
+    font-size: 1.2rem;
+}
+
+.apres .container .cont-apres .botao2 {
+    margin: 2rem 0;
+    width: 10rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+.motivos {
+    background-color: var(--cor5);
+}
+
+.motivos .container{
+    padding: 5rem 0;
+    display: grid;
+    grid-template-areas:
+        "topo topo"
+        "mot1 mot2"
+        "mot3 mot4"
+        "base base";
+    grid-gap: 2rem;
+    grid-template-rows: 1fr 2fr 2fr 3fr;
+}
+
+.motivos .container .topo-motivos {
+    grid-area: topo;
+    font-size: 2rem;
+}
+
+.cont-mot {
+    font-size: 1.2rem;
+    margin-top: 4rem;
+}
+
+.motivos .container div:nth-child(2) {
+    grid-area: mot1;
+}
+
+.motivos .container div:nth-child(3) {
+    grid-area: mot2;
+}
+
+.motivos .container div:nth-child(4) {
+    grid-area: mot3;
+}
+
+.motivos .container div:nth-child(5) {
+    grid-area: mot4;
+}
+
+.motivos .container .base-motivos {
+    grid-area: base;
+    font-size: 2rem;
+    display: grid;
+    grid-template-areas: 
+    "topo topo topo topo"
+    "foto1 foto2 foto3 foto4";
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-items: center;
+}
+
+.base-motivos *:nth-child(n) {
+    margin: 1rem 0;
+}
+
+.base-motivos h4:nth-child(1) {
+    grid-area: topo;
+    font-weight: 500;
+    margin-top: 4rem;
+}
+
+.base-motivos img:nth-child(2) {
+    grid-area: foto1;
+}
+
+.base-motivos img:nth-child(3) {
+    grid-area: foto2;
+}
+
+.base-motivos img:nth-child(4) {
+    grid-area: foto3;
+}
+
+.base-motivos img:nth-child(5) {
+    grid-area: foto4;
+}
+
+
+.areas {
+    background-color: var(--cor4);
+}
+
+.areas .container {
+    padding: 3rem 0;
+    line-height: 30px;
+    display: grid;
+    grid-template-areas:
+        "topo topo topo"
+        "area1 area2 area3"
+        "area4 area5 area6";
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 3fr);
+    grid-gap: 2rem;
+}
+
+.areas .topo-areas {
+    grid-area: topo;
+    display: grid;
+    grid-template-areas:
+        "titulo botao"
+        "paragrafo botao";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    align-items: center;
+    justify-items: start;
+    grid-gap: 20px;
+}
+
+.areas .topo-areas h2{
+    grid-area: titulo;
+    font-size: 2rem;
+    align-self: self-end;
+}
+
+.areas .topo-areas p{
+    grid-area: paragrafo;
+}
+
+.areas .topo-areas a{
+    grid-area: botao;
+    width: 10rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+.areas h3 {
+    padding-bottom: 1rem;
+    font-size: 1.3rem;
+    color: var(--cor1);
+}
+
+.areas .container div:nth-child(n) {
+    margin: 1.7rem 0;
+}
+
+.areas .container div:nth-child(2) {
+    grid-area: area1;
+}
+
+.areas div:nth-child(3) {
+    grid-area: area2;
+}
+
+.areas div:nth-child(4) {
+    grid-area: area3;
+}
+
+.areas div:nth-child(5) {
+    grid-area: area4;
+}
+
+.areas div:nth-child(6) {
+    grid-area: area5;
+}
+
+.areas div:nth-child(7) {
+    grid-area: area6;
+}
+
+
+.depoimentos {
+    background-color: var(--cor5);
+}
+
+.depoimentos .container {
+    padding: 5rem 0;
+}
+
+.depoimentos .container .topo-depo{
+    display: grid;
+    grid-template-areas:
+    "conteudo foto";
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-gap: 1rem;
+}
+
+.depoimentos .container .topo-cont {
+    grid-area: conteudo;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.depoimentos .container .topo-cont img {
+    height: 100px;
+    width: 100px;
+}
+.depoimentos .container .topo-cont h3{
+    font-size: 2rem;
+}
+
+.topo-depo > img {
+    grid-area: foto;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    box-shadow: 0px 0px 9px rgb(0 0 0 / 50%);
+}
+
+.depoimentos .base-depo {
+    display: flex;
+    gap: 1rem;
+    padding: 3rem 0;
+}
+
+.depoimentos .container .quad-depo {
+    display: grid;
+    grid-template-areas: 
+    "coment coment"
+    "foto nome";
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 1rem;
+    justify-items: center;
+    align-items: center;
+}
+
+.depoimentos .container .quad-depo img {
+    height: 100px;
+    width: 100px;
+}
+
+.depoimentos .container .quad-depo *:nth-child(1){
+    grid-area: coment;
+}
+
+.depoimentos .container .quad-depo *:nth-child(2){
+    grid-area: foto;
+}
+
+.depoimentos .container .quad-depo *:nth-child(3){
+    grid-area: nome;
+    justify-self: start;
+}
+ 
+.depoimentos .container a {
+    display: block;
+    width: 250px;
+    margin: auto;
+    text-align: center;
+    font-weight: 600;
+}
+
+
+
+@media (max-width: 800px) {
+
+    html {
+        font-size: 110%;
+    }
+
+    .apres .container {
+        grid-template-areas:
+            "topo"
+            "imagem"
+            "conteudo";
+    }
+
+    .areas .topo-areas {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+    }
+  
+    .areas .topo-areas h2 {
+        align-self: initial;
+       
+    }
+}
+
+@media (max-width: 700px) {
+    html {
+        font-size: 130%;
+    }
+
+    .areas .container {
+        grid-template-areas:
+        "topo topo"
+        "area1 area2"
+        "area3 area4"
+        "area5 area6";
+        grid-template-columns: repeat(2, 3fr);
+        grid-template-rows: initial;
+        line-height: initial;
+    }
+
+    .depoimentos .container .topo-depo {
+        grid-template-areas: 
+        "conteudo" 
+        "foto";
+        grid-template-columns: initial;
+    }
+
+    .depoimentos .container .topo-cont {
+        align-items: center;
+        text-align: center;
+    }
+
+    .depoimentos .base-depo {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .depoimentos .container .quad-depo {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .banner .container {
+        grid-template-areas:
+        "cont1"
+        "cont2"
+        "cont3";
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .banner .botao1 {
+        margin: 2rem auto;
+    }
+
+    .apres .container .cont-apres {
+        text-align: center;
+        align-items: center;
+    }
+
+    .motivos .container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+       
+    }
+
+    .motivos .container .base-motivos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .motivos .container .base-motivos img{
+        width: 50vw;
+        min-width: 150px;
+    }
+
+    .areas .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .areas .topo-areas a {
+        height: initial;
+    }
+ 
+}

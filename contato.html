@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="geral.css">
+    <link rel="stylesheet" href="menu-mobile.css">
+    <link rel="stylesheet" href="contato.css">
+    <link rel="shortcut icon" href="favicon.ico" type="x-icon">
+    <meta name="Este é um exemplo de site de Advocacia">
+    <title>Sobre - Advocacia</title>
+</head>
+<body>
+    <header class="menu-classico">
+        <div class="container">
+            <a href="index.html"><img src="https://res.cloudinary.com/delxum6fl/image/upload/f_auto,q_auto:good/v1615559441/direito-previdenciario_jqddgn.png" alt="Exemplo de Logo de Advocacia"><h1>Advocacia</h1></a>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="sobre.html">SOBRE</a></li>
+                    <li><a href="contato.html" class="botao1">CONTATO</li></a>
+                </ul>
+        </div>
+    </header>
+    <header class="menu-mobile">
+        <div class="container">
+            <input type="checkbox" id="botao-menu">
+            <label for="botao-menu" class="bot-menu">
+                <div class="tracos">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </label>
+            <nav class="menu-conteudo">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="sobre.html">SOBRE</a></li>
+                    <li><a href="contato.html" class="botao1">CONTATO</li></a>
+                </ul>
+            </nav>         
+        </div>
+    </header>
+    <main>
+        <section class="banner fundo">
+            <div class="escurecimento">
+                <div class="container">
+                    
+                    <h1>Entre em Contato</h1>
+                </div>
+            </div>
+        </section>
+        <section class="info">
+            <div class="container">
+                <div class="topo-info">
+                    <h2>Informações de Contato</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae esse minus, ut voluptate iste eos quibusdam vel doloribus ad animi omnis officia, sequi non et, aliquam nostrum asperiores harum rerum.</p>
+                </div>
+                <img src="https://img.migalhas.com.br/gf_base/empresas/MIGA/imagens/9F632FD0E068E96F5C54F98C6423C4FCEB5F_telefone.jpg" alt="Foto de um telefone">
+                <div class="base-info">
+                    
+                    <h3>Rua Alearória, S/N, Bairro - Cidade - Estado</h3>
+                    <h3>(22)9922-5466 / (22)9898-9898</h3>
+                    <h3>advogados@email.com</h3>
+                    <h3>10h00 - 21h00</h3>
+                </div>
+                
+            </div>
+        </section>
+        <section class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d467692.0486394806!2d-46.875481775542944!3d-23.68153151318806!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce448183a461d1%3A0x9ba94b08ff335bae!2zU8OjbyBQYXVsbywgU1A!5e0!3m2!1spt-BR!2sbr!4v1646142946703!5m2!1spt-BR!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </section>
+        <section class="formulario">
+            <div class="container">
+                <img src="https://res.cloudinary.com/delxum6fl/image/upload/f_auto,q_auto:good/v1615559441/direito-previdenciario_jqddgn.png" alt="Foto do Símbolo da Lei">
+                <form action="contato.html" method="post">
+                    <h2>Revise seu caso conosco</h2>
+                    <h3>As consultas são gratuitas</h3>
+                    
+                    <label for="name"><div>Nome:</div>
+                        <input type="text" id="name" class="dados" required>
+                    </label>
+                    <label for="tel"><div>Telefone:</div>
+                        <input type="number" id="tel" class="dados" required>
+                    </label>
+                    <label for="email"><div>E-mail:</div>
+                        <input type="email" id="email" class="dados">
+                    </label>
+                    <label for="know"><div>Como você nos conheceu?</div>
+                        
+                        <select id="know" class="dados">
+                            <option value="">Familía</option>
+                            <option value="">Amigos</option>
+                            <option value="">Google</option>
+                            <option value="">Outros</option>
+                        </select>
+                    </label>
+                    
+                    <label for="contact" ><div>Como deseja ser contatado?</div>
+                        <div id="contato-input">
+                            <label><input type="radio" id="radio1" name="contact"> WhatsApp</label>
+                            
+                            <label><input type="radio" id="radio2" name="contact"> E-mail</label>
+                            <label><input type="radio" id="radio3" name="contact"> Ligação</label>
+                        </div>
+                    </label>
+                    
+                    <label for="caso"><div>Descreva seu caso:</div>
+                        <textarea name="caso" id="caso" class="dados"></textarea>
+                    </label>
+                    <label for="terms">
+                        <input type="checkbox" id="terms">
+                        Deseja receber nossos e-mails informativos?
+                    </label>
+                    <input type="submit" value="OBTER AJUDA" class="botao1" id="botao-form">
+                </form>
+            </div>
+            
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <section class="topo-footer">
+                <div class="quad-footer">
+                    <h3>Contato</h3>
+                    <ul>
+                        <li>Rua Alearória, S/N, <br>Bairro - Cidade - Estado</li>
+                        <li>(XX)XXXX-XXXX / (XX)XXXX-XXXX</li>
+                        <li>email@email.com</li>
+                        <li>@conta_do_intagram</li>
+                        <li>Perfil do Facebook</li>
+                    </ul>
+                </div>
+                <div class="quad-footer">
+                    <h3>Atuação</h3>
+                    <ul>
+                        <li>Acidente de Carro</li>
+                        <li>Acidente de Caminhão</li>
+                        <li>Lesão Corporal</li>
+                        <li>Produtos Defeituosos</li>
+                        <li>Compensação Trabalhista</li>
+                        <li>Divórcios</li>
+                    </ul>
+                </div>
+                <div class="quad-footer">
+                    <h3>Horários</h3>
+                    <ul>
+                        <li>Seg: 09h00 - 17h00</li>
+                        <li>Ter: 09h00 - 17h00</li>
+                        <li>Qua: 09h00 - 17h00</li>
+                        <li>Qui: 09h00 - 17h00</li>
+                        <li>Sex: 09h00 - 17h00</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="base-footer">
+                <p>Site feito por Dev Leonardo de Amorim Colussi</p>
+            </section>
+        </div>
+    </footer>
+</body>
+</html>

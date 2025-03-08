@@ -1,0 +1,237 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@300;400;500;700;900&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap');
+
+:root {
+   
+    --fonte1: 'Frank Ruhl Libre', serif;
+    --fonte2: 'Source Sans Pro', sans-serif;
+
+    
+    --cor1: rgb(152, 30, 37);
+    --cor2: rgb(18, 18, 18);
+    --cor3: rgb(74, 74, 74);
+    --cor4: rgb(220, 220, 220);
+    --cor5: rgb(230, 230, 230);
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: var(--fonte2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--fonte1);
+    font-weight: 500;
+}
+
+a, li {
+    text-decoration: none;
+    list-style-type: none;
+}
+
+section, header, p, main {
+    max-width: 100vw;
+    overflow: hidden;
+}
+
+
+.banner {
+    background-image: url(https://img.freepik.com/fotos-premium/ele-tem-o-melhor-mentor-foto-de-dois-advogados-conversando-na-cidade_590464-1741.jpg?w=1380);
+}
+
+.fundo {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.banner .escurecimento {
+    min-height: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner .container h1{
+    text-align: right;
+    color: white;
+    font-size: 4rem;
+    font-weight: 500;
+}
+
+
+.info {
+    background-color: var(--cor4);
+    padding: 4rem 0;
+}
+
+.info .container {
+    display: grid;
+    grid-template-areas: 
+    "topo foto"
+    "base foto";
+    grid-template-columns: 1fr 50%;
+    grid-gap: 2rem;
+}
+
+.info .topo-info {
+    grid-area: topo;
+}
+
+.info .topo-info h2{
+    font-size: 3rem;
+}
+
+.info .topo-info p {
+    line-height: 2rem;
+}
+
+.info img{
+    grid-area: foto;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+}
+
+.info .base-info {
+    grid-area: base;
+}
+
+.info .base-info h3{
+    font-size: 1.5rem;
+    padding-bottom: 1.2rem;
+}
+
+.info .base-info h3:last-child{
+    padding-bottom: 0;
+}
+
+
+iframe{
+    width: 100%;
+    min-height: 500px;
+}
+
+
+.formulario {
+    background-color: var(--cor4);
+    padding: 4rem 0;
+}
+
+.formulario .container {
+    display: grid;
+    grid-template-areas: 
+    "foto formulario";
+    grid-template-columns: 50% 1fr;
+    grid-gap: 3rem;
+}
+
+.formulario .container img{
+    grid-area: foto;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.formulario .container form{
+    grid-area: formulario;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.formulario .container form > *:nth-child(n){
+    margin-bottom: .8rem;
+}
+
+.formulario .container form h2{
+    font-size: 2.2rem;
+}
+
+.formulario .container form h3{
+    color: var(--cor1);
+    font-size: 1.5rem;
+}
+
+.formulario .dados {
+    width: 100%;
+    padding: .3rem 0;
+}
+
+#contato-input {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#caso {
+    min-height: 100px;
+    resize: none;
+}
+
+.formulario .container form .botao1 {
+    margin: 0;
+    border: none;
+    width: 160px;
+    font-weight: 600;
+}
+
+
+
+@media (max-width: 700px) {
+    html {
+        font-size: 110%;
+    }
+
+    h1, h2, h3, h4, p {
+        text-align: center;
+    }
+
+    .banner .container h1 {
+        text-align: center;
+    }
+
+    .info .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .info .topo-info h2 {
+        font-size: 2.8rem;
+    }
+
+    .formulario .container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .formulario .container img {
+        display: none;
+    }
+
+    .formulario .container form, option {
+        width: 100%;
+        font-size: 1.3rem;
+    }
+
+    .formulario .dados {
+        padding: .6rem 0;
+    }
+
+    #contato-input {
+        justify-content: space-between;
+    }
+    
+    .formulario .container form .botao1 {
+        margin: 2rem auto 0 auto;
+        width: initial;
+        font-weight: 500;
+        font-size: 1rem;
+    }
+}
